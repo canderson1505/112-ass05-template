@@ -11,7 +11,8 @@
  * 3. At the bottom, add:
  *    #endif
  */
-
+#ifndef CODE_H
+#define CODE_H
 /*
  * Find the maximum value in an array
  * Parameters: arr (pointer to array), n (number of elements)
@@ -54,6 +55,7 @@ int linear_search(int arr[], int n, int target);
  */
 double heron(double x, double epsilon);
 
+#endif
 /*
  * Remember to add #endif at the end!
  */
