@@ -83,7 +83,7 @@ long sum_array(int arr[], int n)
 {
     long sum = 0;
 
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < n; i++)
     {
         sum = sum + arr[i];
 
