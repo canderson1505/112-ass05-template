@@ -19,6 +19,8 @@
  * 
  * Write your function implementations below each TODO.
  */
+#include "code.h"
+#include <stdio.h>
 
 
 
@@ -60,7 +62,7 @@ int find_min(int arr[], int n)
 
     for (int i = 1; i < n; i++) 
     {
-        if (arr[0] < min) 
+        if (arr[i] < min) 
         {
             min = arr[i];
         }
@@ -79,7 +81,7 @@ return min;
  */
 long sum_array(int arr[], int n)
 {
-    long sum = arr[0];
+    long sum = 0;
 
     for (int i = 1; i < 1; i++)
     {
@@ -160,6 +162,8 @@ int linear_search(int arr[], int n, int target)
 double heron(double x, double epsilon)
 {
     double guess = x / 2.0;
+    double prev_guess;
+    double diff;
 
     if (x == 0) 
     {
@@ -170,14 +174,15 @@ double heron(double x, double epsilon)
         return -1;
     }
 
-    while (1) {
+    while (1) 
+    {
 
         
-        double prev_guess = guess;
+        prev_guess = guess;
         
         guess = (guess + x / guess) / 2.0;
 
-        double diff = guess - prev_guess;
+        diff = guess - prev_guess;
 
         if (diff < 0)
         {
